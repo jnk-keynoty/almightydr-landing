@@ -13,6 +13,8 @@ import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
+
+import Brand from "../../components/Brand/Brand";
 // core components
 import headerStyle from "assets/jss/material-kit-react/components/headerStyle.jsx";
 
@@ -64,16 +66,18 @@ class Header extends React.Component {
       rightLinks,
       leftLinks,
       brand,
+      logo,
       fixed,
       absolute
     } = this.props;
+    console.log(classes)
     const appBarClasses = classNames({
       [classes.appBar]: true,
       [classes[color]]: color,
       [classes.absolute]: absolute,
-      [classes.fixed]: fixed
+      [classes.fixed]: fixed,
     });
-    const brandComponent = <Button className={classes.title}>{brand}</Button>;
+    const brandComponent = <Brand brand={brand} logo={logo}></Brand>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>

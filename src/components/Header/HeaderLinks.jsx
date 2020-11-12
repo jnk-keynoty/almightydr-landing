@@ -26,88 +26,34 @@ function HeaderLinks({ ...props }) {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="Components"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>
-              All components
-            </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>
-          ]}
-        />
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/material-kit-react"
+      <Button
+          href="/almightydr-page"
           color="transparent"
           target="_blank"
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} /> Download
+          올마이티 닥터
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
+        <Button
+          href="/callcenter"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
         >
-          <Button
-            href="https://twitter.com/CreativeTim"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <FaTwitter/>
-          </Button>
-        </Tooltip>
+          콜센터
+        </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
-          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
+      <Button
+          href="/contactus"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
         >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/CreativeTim"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <FaFacebook/>
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on instagram"
-          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <FaInstagram/>
-          </Button>
-        </Tooltip>
+          문의하기
+        </Button>
       </ListItem>
     </List>
   );
