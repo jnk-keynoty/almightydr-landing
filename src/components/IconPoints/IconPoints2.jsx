@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     pointContainer : {
-        width: "140px",
+        margin: "15px auto",
         textAlign: "center",
         wordBreak: "keep-all",
         '& h4': {
@@ -16,66 +16,91 @@ const useStyles = makeStyles(theme => ({
     },
     iconContainer : {
         borderRadius: "50%",
-        borderWidth: "1px",
-        borderStyle: "solid",
         color: props => props.iconColor,
-        borderColor: props => props.iconColor,
         lineHeight: "1em",
+        backgroundColor: "#fcfcfc",
+        boxShadow:  "5px 5px 5px #d9d9d9, -5px -5px 5px #ffffff",
     },
-    [theme.breakpoints.down(768)]: {
+    [theme.breakpoints.down(576)]: {
         pointContainer : {
-            width: "100%",
+            margin: "10px auto",
+            padding: "0 15px",
             '& h4': {
                 fontSize: "16px",
+                textAlign: "left",
             }
         },
         iconContainer : {
-            padding: "15px",
-            width: "100px",
-            height: "100px",
+            padding: "10px",
+            width: "80px",
+            height: "80px",
             marginRight: "10px",
-            fontSize: "70px",
+            fontSize: "60px",
+        },    
+    },
+    [theme.breakpoints.up(576)]: {
+        pointContainer : {
+            margin: "0 auto",
+            '& h4': {
+                fontSize: "14px",
+            }
+        },
+        iconContainer : {
+            padding: "10px",
+            width: "80px",
+            height: "80px",
+            fontSize: "60px",
         },    
     },
     [theme.breakpoints.up(768)]: {
         pointContainer : {
-            width: "100px",
-            margin: "0 10px",
+            margin: "0 auto",
             '& h4': {
-                fontSize: "16px",
+                fontSize: "14px",
             }
         },
         iconContainer : {
             padding: "15px",
+            width: "100px",
             height: "100px",
             fontSize: "70px",
         },    
     },
     [theme.breakpoints.up(992)]: {
         pointContainer : {
-            width: "140px",
-            margin: "0 20px",
+            maxWidth: "150px",
+            margin: "10px auto 0",
+            '& h4': {
+                fontSize: "16px",
+            }
+        },
+    },
+    [theme.breakpoints.up(1200)]: {
+        pointContainer : {
+            maxWidth: "190px",
+            margin: "15px auto",
             '& h4': {
                 fontSize: "20px",
             }
         },
         iconContainer : {
             padding: "22px",
+            width: "140px",
             height: "140px",
             fontSize: "96px",
+            margin: "0 auto"
         },    
     },
 
 }))
 
-function IconPoints({ ...props }) {
+function IconPoints2({ ...props }) {
     const { icon, title } = props;
     const addClasses = useStyles(props);
-    const mdScreen = useMediaQuery(theme => theme.breakpoints.up(768));
-    const lgScreen = useMediaQuery(theme => theme.breakpoints.up(992));
+    const smScreen = useMediaQuery(theme => theme.breakpoints.up(576));
 
     return (
-        <Grid container className={addClasses.pointContainer} direction={mdScreen||lgScreen?"column":"row"} alignItems="center" justify="flex-start">
+        <Grid container className={addClasses.pointContainer} direction={smScreen?"column":"row"} alignItems="center" justify="flex-start" wrap="nowrap">
             <Grid item>
                 <div className={addClasses.iconContainer}><SvgIcon component={icon} fontSize="inherit"/></div>
             </Grid>
@@ -86,4 +111,4 @@ function IconPoints({ ...props }) {
     );
 }
 
-export default IconPoints;
+export default IconPoints2;

@@ -5,8 +5,8 @@ import { makeStyles } from '@material-ui/styles';
 const useStyles = makeStyles({
     root: {
         display: "inline-block",
-        width: "60px",
-        height: "60px",
+        width: "50px",
+        height: "50px",
     }
 })
 

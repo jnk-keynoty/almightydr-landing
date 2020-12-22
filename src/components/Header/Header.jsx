@@ -8,11 +8,10 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
-import Menu from "@material-ui/icons/Menu";
+import { ReactComponent as NewMenu } from '../../assets/ico/btn-menu.svg'
 
 import Brand from "../../components/Brand/Brand";
 // core components
@@ -70,7 +69,7 @@ class Header extends React.Component {
       fixed,
       absolute
     } = this.props;
-    console.log(classes)
+
     const appBarClasses = classNames({
       [classes.appBar]: true,
       [classes[color]]: color,
@@ -100,7 +99,7 @@ class Header extends React.Component {
               aria-label="open drawer"
               onClick={this.handleDrawerToggle}
             >
-              <Menu />
+              <NewMenu />
             </IconButton>
           </Hidden>
         </Toolbar>
