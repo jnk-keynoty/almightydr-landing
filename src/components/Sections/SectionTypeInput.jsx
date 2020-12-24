@@ -9,6 +9,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 
 import sectionTypeInputStyle from "assets/jss/material-kit-react/views/almightydrSections/sectionTypeInputStyle.jsx";
 import CustomButton from '../Button/CustomButton';
@@ -29,8 +31,18 @@ const validationSchema = yup.object({
       .boolean()
       .oneOf([true], "개인정보 제공 동의는 필수입니다.")
   });
-  
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 function SectionTypeInput(props) {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
     const { buttonCaption, buttonColor, classes, topNode, } = props;
       const formik = useFormik({
         initialValues: {
@@ -42,13 +54,13 @@ function SectionTypeInput(props) {
         validationSchema: validationSchema,
         onSubmit: (values, { setSubmitting, resetForm }) => {
           console.log(values);
-          axios.post('http://strapi.almightydr.com/inquries', values)
+          axios.post('http://strapi.almightydr.com/Inquiries', values)
           .then(function (res) {
               console.log(res);
               setSubmitting(false);
               resetForm();
           })
-          .then(() => alert("Your inquire has been submitted"))
+          .then(() => setOpen(true))
           .then(() => setSubmitting(false))
           .catch(function (err) {
               console.log(err);
@@ -136,6 +148,11 @@ function SectionTypeInput(props) {
                     </div>
                 </GridItem>
               </GridContainer>
+              <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="success">
+                  문의가 접수되었습니다. 감사합니다.
+                </Alert>
+              </Snackbar>
             </div>
         );
 }
