@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import GridContainer from '../Grid/GridContainer';
@@ -56,5 +57,7 @@ function SectionType2({ ...props }) {
             </GridContainer>
         );
 }
-
+SectionType2.propTypes = {
+    data: PropTypes.object,
+};
 export default withStyles(sectionType2Style)(SectionType2);
