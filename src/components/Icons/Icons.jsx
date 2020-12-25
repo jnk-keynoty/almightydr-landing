@@ -2,7 +2,7 @@ import React from 'react'
 import { ReactComponent as BillIcon } from '../../assets/ico/ico-bill.svg';
 import { ReactComponent as CallIcon } from '../../assets/ico/ico-call.svg';
 import { ReactComponent as CardIcon } from '../../assets/ico/ico-card.svg';
-import { ReactComponent as ClickIcon } from '../../assets/ico/ico-Click.svg';
+import { ReactComponent as ClickIcon } from '../../assets/ico/ico-click.svg';
 import { ReactComponent as Data01Icon } from '../../assets/ico/ico-data01.svg';
 import { ReactComponent as Data02Icon } from '../../assets/ico/ico-data02.svg';
 import { ReactComponent as Data03Icon } from '../../assets/ico/ico-data03.svg';
@@ -22,11 +22,11 @@ import { ReactComponent as Report03Icon } from '../../assets/ico/ico-report03.sv
 import { ReactComponent as Report04Icon } from '../../assets/ico/ico-report04.svg';
 import { ReactComponent as StateIcon } from '../../assets/ico/ico-state.svg';
 import { ReactComponent as StorageIcon } from '../../assets/ico/ico-storage.svg';
-import { ReactComponent as SyncIcon } from '../../assets/ico/ico-Sync.svg';
+import { ReactComponent as SyncIcon } from '../../assets/ico/ico-sync.svg';
 import { ReactComponent as TalkIcon } from '../../assets/ico/ico-talk.svg';
 import { ReactComponent as Up01Icon } from '../../assets/ico/ico-up01.svg';
 import { ReactComponent as Up02Icon } from '../../assets/ico/ico-up02.svg';
-import { ReactComponent as WriteIcon } from '../../assets/ico/ico-Write.svg';
+import { ReactComponent as WriteIcon } from '../../assets/ico/ico-write.svg';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
