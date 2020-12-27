@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 import IconPoints2 from '../../../components/IconPoints/IconPoints2';
 import Typography from '@material-ui/core/Typography';

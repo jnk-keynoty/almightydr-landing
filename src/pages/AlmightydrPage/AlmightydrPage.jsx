@@ -1,5 +1,5 @@
 import React from 'react';
-import withStyles from '@material-ui/styles/withStyles';
+import withStyles from '@material-ui/core/styles/withStyles';
 import { createMuiTheme, CssBaseline } from '@material-ui/core';
 import { ThemeProvider } from "@material-ui/core"
 import SpoqaHanSans from "typeface-spoqa-han-sans"
