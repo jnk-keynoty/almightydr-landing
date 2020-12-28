@@ -3,7 +3,6 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import theme from '../../theme';
 import { CssBaseline } from '@material-ui/core/styles';
 import { ThemeProvider } from "@material-ui/core/styles"
-import SpoqaHanSans from "typeface-spoqa-han-sans"
 
 import Header from "components/Header/Header.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
