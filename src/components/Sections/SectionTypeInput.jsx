@@ -54,7 +54,16 @@ function SectionTypeInput(props) {
         validationSchema: validationSchema,
         onSubmit: (values, { setSubmitting, resetForm }) => {
           console.log(values);
-          axios.post('http://strapi.almightydr.com/Inquiries', values)
+          axios({
+            method: 'post',
+            withCredentials: false,
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+            },
+            url: 'http://strapi.almightydr.com/Inquiries',
+            data: values,
+
+          }).post('http://strapi.almightydr.com/Inquiries', values)
           .then(function (res) {
               console.log(res);
               setSubmitting(false);

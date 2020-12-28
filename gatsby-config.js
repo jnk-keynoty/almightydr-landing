@@ -27,6 +27,7 @@ module.exports = {
       options: {
         color: `tomato`,
         showSpinner: false,
+        minimum: 1,
       },
     },
   ],
