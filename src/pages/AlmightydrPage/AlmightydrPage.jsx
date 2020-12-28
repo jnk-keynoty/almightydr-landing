@@ -1,7 +1,6 @@
 import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import theme from '../../theme';
-import { CssBaseline } from '@material-ui/core/styles';
 import { ThemeProvider } from "@material-ui/core/styles"
 
 import Header from "components/Header/Header.jsx";
