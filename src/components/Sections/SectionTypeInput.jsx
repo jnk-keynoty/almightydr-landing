@@ -63,7 +63,7 @@ function SectionTypeInput(props) {
             url: 'http://strapi.almightydr.com/Inquiries',
             data: values,
 
-          }).post('http://strapi.almightydr.com/Inquiries', values)
+          })
           .then(function (res) {
               console.log(res);
               setSubmitting(false);
