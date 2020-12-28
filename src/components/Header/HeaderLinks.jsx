@@ -29,7 +29,6 @@ function HeaderLinks({ ...props }) {
       <Button
           href="/almightydr-page"
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
           올마이티 닥터
@@ -39,7 +38,6 @@ function HeaderLinks({ ...props }) {
         <Button
           href="/callcenter"
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
           콜센터
@@ -49,7 +47,6 @@ function HeaderLinks({ ...props }) {
       <Button
           href="/contactus"
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
           문의하기
