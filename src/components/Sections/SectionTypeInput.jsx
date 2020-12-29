@@ -60,7 +60,7 @@ function SectionTypeInput(props) {
             headers: {
               'Access-Control-Allow-Origin': '*',
             },
-            url: 'http://strapi.almightydr.com/Inquiries',
+            url: 'https://strapi.almightydr.com/inquiries',
             data: values,
 
           })
