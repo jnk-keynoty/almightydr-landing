@@ -58,6 +58,7 @@ function SectionTypeInput(props) {
             method: 'post',
             withCredentials: false,
             headers: {
+              'Access-Control-Allow-Headers': '*',
               'Access-Control-Allow-Origin': '*',
             },
             url: 'https://strapi.almightydr.com/inquiries',
