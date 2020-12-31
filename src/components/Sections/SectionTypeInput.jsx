@@ -58,7 +58,6 @@ function SectionTypeInput(props) {
             method: 'post',
             withCredentials: false,
             headers: {
-              'Content-Type' : 'application/xml',
             },
             url: 'https://strapi.almightydr.com/inquiries',
             data: values,
