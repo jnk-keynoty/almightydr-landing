@@ -21,6 +21,11 @@ import Button from '@material-ui/core/Button';
       primary: {
         boxShadow: "10px 10px 20px #552d83, -10px -10px 20px #733db1",
       },
+      danger: {
+        backgroundColor: "#FFEF81",
+        boxShadow: "10px 10px 20px #d9cb6e, -10px -10px 20px #ffff94",
+        color: "rgba(0, 0, 0, 0.87)",
+      },
       [theme.breakpoints.down(768)]: {
         button: {
           maxWidth: "300px",
@@ -38,6 +43,13 @@ function CustomButton ({...props}) {
             buttonClass = ""
           }else {
             buttonClass = addClasses.primary;
+          }
+            break;
+        case "danger" :
+          if (noShadow) {
+            buttonClass = ""
+          }else {
+            buttonClass = addClasses.danger;
           }
             break;
         case "default" :

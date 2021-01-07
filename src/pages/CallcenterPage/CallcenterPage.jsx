@@ -7,25 +7,18 @@ import Header from "components/Header/Header.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import ReactFullpage from '@fullpage/react-fullpage';
 
-import IntroSection from './Sections/IntroSection';
-import ManagementSection from './Sections/ManagementSection';
-import AnalysisSection from './Sections/AnalysisSection';
-import EasySection from './Sections/EasySection';
-import PointsSection from './Sections/PointsSection';
-import FeaturesSection from './Sections/FeaturesSection';
-import CaseSection from './Sections/CaseSection';
-import EffectiveSection from './Sections/EffectiveSection';
-import AlmightyInquire from './Sections/AlmightyInquire';
+import CallcenterInquire from './Sections/CallcenterInquire';
 
-import almightydrPageStyle from "assets/jss/material-kit-react/views/almightydrPage.jsx";
+import callcenterPageStyle from "assets/jss/material-kit-react/views/callcenterPage.jsx";
 
 import logoUrl from '../../assets/ico/logo.svg';
-
-import './fullpage.css';
+import IntroSection from './Sections/IntroSection';
+import BestSection from './Sections/BestSection';
+import PointsSection from './Sections/PointsSection';
 
 const dashboardRoutes = [];
 
-class AlmightydrPage extends React.Component {  
+class CallcenterPage extends React.Component {  
 
   componentDidMount() {
     const buttonToLast = document.querySelector('#toLastpage');
@@ -56,12 +49,11 @@ class AlmightydrPage extends React.Component {
       scrollingSpeed = {1000} /* Options here */
       navigation
       sectionsColor={[
-        "#64359a", "#64359a", "#64359a", "#64359a", "#64359a", 
-        "#64359a", "#64359a", "#64359a", "#64359a", "#64359a", 
-        "#64359a", "#FFFFFF", "#64359a", "#64359a"]}
+        "#FFEF81", "#FFEF81", "#FFEF81", "#FFEF81", "#FFEF81", 
+        "#FFEF81"]}
       responsive={768}
-      onLeave= {function(origin, destination, direction){
-        const lightPages = [10, 11, 12];
+      afterLoad= {function(origin, destination, direction){
+        const lightPages = [0, 1, 5];
         if(lightPages.includes(destination.index)){
           document.body.classList.add("light-page");
         }
@@ -73,29 +65,14 @@ class AlmightydrPage extends React.Component {
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <IntroSection fullpageApi={fullpageApi}/>
+                <IntroSection />
             </div>
             <div className="section">
-              <ManagementSection fullpageApi={fullpageApi}/>
+                <BestSection />
             </div>
-            <PointsSection/>
+            <PointsSection />
             <div className="section">
-              <AnalysisSection fullpageApi={ fullpageApi }/>
-            </div>
-            <div className="section">
-              <EasySection fullpageApi={ fullpageApi }/>
-            </div>
-            <div className="section">
-              <CaseSection fullpageApi={ fullpageApi }/>
-            </div>
-            <div className="section">
-              <FeaturesSection/>
-            </div>
-            <div className="section">
-              <EffectiveSection fullpageApi={ fullpageApi }/>
-            </div>
-            <div className="section">
-              <AlmightyInquire/>
+              <CallcenterInquire/>
             </div>
           </ReactFullpage.Wrapper>
         );
@@ -109,4 +86,4 @@ class AlmightydrPage extends React.Component {
   }
   }
 
-export default withStyles(almightydrPageStyle)(AlmightydrPage);
+export default withStyles(callcenterPageStyle)(CallcenterPage);

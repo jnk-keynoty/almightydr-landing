@@ -34,7 +34,7 @@ function SectionType2({ ...props }) {
                                 <Grid item className={classes.topText}>
                                     <Typography variant="h4" ><b>{data.preTitle}</b></Typography>
                                     <Typography variant="h3" gutterBottom><b>{data.title}</b></Typography>
-                                    {data.content}
+                                    <Typography>{data.content}</Typography>
                                 </Grid>
                             </Grid>
                         </div>

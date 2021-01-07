@@ -2,6 +2,9 @@ import { container } from "assets/jss/material-kit-react.jsx";
 
 const sectionType2Style = theme => ({
   container,
+  topText: {
+    color: props => props.data.topTextColor,
+    },
   [theme.breakpoints.down(768)]: {
     fullHeight: {
         height: "auto",
@@ -15,7 +18,7 @@ const sectionType2Style = theme => ({
         height: "auto",
     },
     topText: {
-        padding: "80px 0 30px"
+        padding: "80px 0 30px",
     },
     bottomLists: {
         padding: "30px 0"

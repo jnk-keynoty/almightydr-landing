@@ -4,6 +4,9 @@ import SpoqaHanSans from "typeface-spoqa-han-sans"
 const theme = createMuiTheme({
     typography: {
       fontFamily: 'Spoqa Han Sans, Helvetica, Arial, sans-serif',
+      body1: {
+        fontSize: 16,
+      },
     },
     overrides: {
       MuiCssBaseline: {

@@ -24,3 +24,10 @@
 @import "plugins/plugin-nouislider";
 @import "plugins/plugin-react-datetime";
 @import "plugins/plugin-react-slick";
+
+body:not(.light-page) #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background-color: #ffffff;
+}
+body.light-page .head-link-color > li > * > span {
+    color: rgba(0, 0, 0, 0.87);
+}

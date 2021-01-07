@@ -16,18 +16,19 @@ import { Apps, CloudDownload } from "@material-ui/icons";
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 // core components
-import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
 
 function HeaderLinks({ ...props }) {
-  const { classes } = props;
+  const { 
+      classes,
+    } = props;
   return (
-    <List className={classes.list}>
+    <List className={`${classes.list} head-link-color`}>
       <ListItem className={classes.listItem}>
       <Button
-          href="/almightydr-page"
+          href="/"
           color="transparent"
           className={classes.navLink}
         >
@@ -45,7 +46,7 @@ function HeaderLinks({ ...props }) {
       </ListItem>
       <ListItem className={classes.listItem}>
       <Button
-          href="/contactus"
+          id="toLastpage"
           color="transparent"
           className={classes.navLink}
         >

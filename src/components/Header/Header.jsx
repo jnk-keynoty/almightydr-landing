@@ -67,7 +67,7 @@ class Header extends React.Component {
       brand,
       logo,
       fixed,
-      absolute
+      absolute,
     } = this.props;
 
     const appBarClasses = classNames({
