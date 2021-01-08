@@ -1,23 +1,14 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import withStyles from '@material-ui/core/styles/withStyles';
+import sectionWrapperStyle from '../../assets/jss/material-kit-react/components/sectionWrapperStyle';
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        [theme.breakpoints.down(768)]: {
-            minHeight: "100vh",
-        },
-        [theme.breakpoints.up(768)]: {
-            height: "100vh",
-        },    
-    },
-}));
-
-export default function SectionWrapper({children, ...props}) {
-    const addClasses = useStyles();
+function SectionWrapper({children, classes, ...props}) {
     return (
 
-        <div className={addClasses.root}>
+        <div className={classes.root}>
             {children}
         </div>
     )
 }
+
+export default withStyles(sectionWrapperStyle)(SectionWrapper)

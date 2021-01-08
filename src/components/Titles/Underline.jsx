@@ -1,16 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import withStyles from '@material-ui/core/styles/withStyles';
+import underlineStyle from '../../assets/jss/material-kit-react/components/underlineStyle';
 
-const useStyle = makeStyles({
-    root: {
-        borderBottom: "1px solid #FFFFFF",
-    }
-})
-
-export default function Underline(props) {
-    const { children } = props;
-    const addClasses = useStyle(props);
+function Underline(props) {
+    const { children, classes } = props;
     return (
-        <span className={addClasses.root}>{children}</span>
+        <span className={classes.root}>{children}</span>
     )
 }
+
+export default withStyles(underlineStyle)(Underline);

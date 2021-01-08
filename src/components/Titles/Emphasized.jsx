@@ -1,25 +1,15 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core';
+import withStyles from '@material-ui/core/styles/withStyles';
+import emphasizedStyle from '../../assets/jss/material-kit-react/components/emphasizedStyle';
 
-const useStyle = makeStyles({
-    root: {
-        fontWeight: "bold",
-        "& span": {
-            display: "inline-block",
-            background: "#FFFFFF",
-            padding: "0px 1.5em",
-            color: (props) => (props.color),
-        }
-    }
-})
-
-export default function Emphasized(props) {
-    const { children } = props;
-    const addClasses = useStyle(props);
+function Emphasized(props) {
+    const { children, classes } = props;
     return (
-        <Typography variant="h3" className={addClasses.root}>
+        <Typography variant="h3" className={classes.root}>
             <span>{children}</span>
         </Typography>
     )
 }
+
+export default withStyles(emphasizedStyle)(Emphasized)

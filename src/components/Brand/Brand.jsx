@@ -1,19 +1,14 @@
 import { Typography } from '@material-ui/core'
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import withStyles from '@material-ui/core/styles/withStyles';
 
-const useStyles = makeStyles({
-    root: {
-        display: "inline-block",
-        width: "50px",
-        height: "50px",
-    }
-})
+import brandStyle from '../../assets/jss/material-kit-react/components/brandStyle';
 
-export default function Brand({...props}) {
-    const {brand, logo} = props;
-    const addClasses = useStyles();
+function Brand({...props}) {
+    const {brand, logo, classes} = props;
     return (
-        <a href="/" className={addClasses.root} style={{backgroundImage: "url("+logo+")", backgroundPosition: "center", backgroundSize: "contain", backgroundRepeat: "no-repeat"}}><Typography variant="srOnly">{brand}</Typography></a>
+        <a href="/" className={classes.root} style={{backgroundImage: "url("+logo+")", backgroundPosition: "center", backgroundSize: "contain", backgroundRepeat: "no-repeat"}}><Typography variant="srOnly">{brand}</Typography></a>
     )
 }
+
+export default withStyles(brandStyle)(Brand)

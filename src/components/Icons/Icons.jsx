@@ -27,24 +27,15 @@ import { ReactComponent as TalkIcon } from '../../assets/ico/ico-talk.svg';
 import { ReactComponent as Up01Icon } from '../../assets/ico/ico-up01.svg';
 import { ReactComponent as Up02Icon } from '../../assets/ico/ico-up02.svg';
 import { ReactComponent as WriteIcon } from '../../assets/ico/ico-write.svg';
-import { makeStyles } from '@material-ui/core';
-
-const useStyles = makeStyles(() => ({
-    root: {
-        '& svg': {
-            width: "100px",
-        }
-    }
-}))
 export { 
     BillIcon, CallIcon, CardIcon, ClickIcon, Data01Icon, Data02Icon, Data03Icon, DbIcon, DefendIcon, DragIcon, GoalIcon, 
     HeartIcon, HistoryIcon, IdIcon, MailIcon, NeditIcon, NstopIcon, Report01Icon, Report02Icon, Report03Icon, Report04Icon, StateIcon,
     StorageIcon, SyncIcon, TalkIcon, Up01Icon, Up02Icon, WriteIcon
 }
 export default function Icons() {
-    const addClasses = useStyles();
+
     return (
-        <div className={addClasses.root}>
+        <div>
                 <div>
                     <BillIcon/><CallIcon/><CardIcon/><ClickIcon/><Data01Icon/>
                 </div>

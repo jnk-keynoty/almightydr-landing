@@ -1,17 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import withStyles from '@material-ui/core/styles/withStyles';
+import keywordStyle from '../../assets/jss/material-kit-react/components/keywordStyle';
 
-const useStyle = makeStyles({
-    root: {
-        fontSize: "1.2em",
-        fontWeight: "bold"
-    }
-})
-
-export default function Keyword(props) {
-    const { children } = props;
-    const addClasses = useStyle(props);
+function Keyword(props) {
+    const { children, classes } = props;
     return (
-        <span className={addClasses.root}>{children}</span>
+        <span className={classes.root}>{children}</span>
     )
 }
+
+export default withStyles(keywordStyle)(Keyword);
